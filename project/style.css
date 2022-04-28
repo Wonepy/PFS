@@ -1,0 +1,345 @@
+:root {
+     --DarkText: hsl(229, 25%, 31%);
+     --ScoreText: hsl(229, 64%, 46%);
+     --HeaderOutline: hsl(217, 16%, 45%);
+   }
+
+
+*, ::after, :hover{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     font-weight: 600;
+
+
+}
+html, body, .app{
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     width: 100%;
+
+ }
+
+ body{
+     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%)); 
+     color: hsl(229, 25%, 31%);
+ }
+.app{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: column;
+
+     position: relative;
+}
+ header{
+      width: 700px;
+      height: 150px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border: solid var(--HeaderOutline) 3px;
+      border-radius: 15px;
+ }
+ header > *{
+     margin: 20px 0;
+ }
+
+img.logo{
+     margin-left: 35px;
+}
+
+.score-container{
+     background-color: white;
+     border-radius: 7.5px;
+
+     margin-right: 25px;
+
+     padding: 9px 49px 9px 49px;
+ 
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.score-title{
+     font-size: 16px;
+     letter-spacing: 1.5px;
+}
+.score{
+     font-size: 65px;
+     font-weight: 700;
+}
+
+
+.app main{
+     background-image: url("../images/bg-triangle.svg");
+     width: 500px;
+     height: 500px;
+     background-repeat: no-repeat;
+     background-position: center;
+     position: relative;
+     z-index: 2;
+}
+
+/* ================================================================== */
+/* ==================POUR LES RONDS ================= */
+/* ================================================================== */
+
+.circle-border{
+     border-radius: 100%;
+     width: 200px;
+     height: 200px;
+
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     position: absolute;
+}
+#paper-border{
+     box-shadow: 1px 10px 0px 1px #2846C1;
+     background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+     top: 0px;
+     left: 0px;
+}
+#rock-border{
+     box-shadow: 1px 10px 0px 1px #A01533;
+     background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+     top: 200px;
+     left: 150px;
+}
+#sizo-border{
+     box-shadow: 1px 10px 0px 1px #C56D1D;
+     background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+     top: 0px;
+     left: 280px;
+}
+.circle-img-container{
+     border-radius: 100%;
+     background-color: white;
+     width: 150px;
+     height: 150px;
+     box-shadow: inset 1px 8px 0px 0px  rgb(0 0 0 / 20%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.circle-img{
+     transform: scale(1.4);
+}
+
+/* ================================================================== */
+/* ================================================================== */
+/* ================================================================== */
+
+/* ================================================================== */
+/* ======================RULES BUTTONS=============================== */
+/* ================================================================== */
+
+.rules-button-container{
+     position: absolute;
+     right: 35px;
+     bottom: 30px;
+     z-index: 2;
+}
+
+.rules-button{
+     padding: 10px 35px 10px 35px;
+     border-radius: 10px;
+     border: solid white 1.5px;
+     letter-spacing: 1.5px;
+     color: white;
+     font-weight: 600;
+}
+
+.rules-img{
+     background-image: url("../images/image-rules.svg");
+     background-position: center;
+     background-repeat: no-repeat;
+     width: 450px;
+     height: 450px;
+
+     position: absolute;
+}
+
+.rules-container{
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     background-color: rgba(0, 0, 0, 0.5);
+     z-index: 3;
+}
+.rules{
+     background-color: white;
+     border-radius: 15px;
+
+     height: 415px;
+     width: 415px;
+
+     position: absolute;
+     z-index: 3;
+
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+
+     padding: 40px 35px 30px 35px;
+ }
+.rules-title-container{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+
+}
+.rules-title{
+     font-size: 32px;
+     font-weight: 700;
+}
+.rules-close-button{
+     cursor: pointer;
+     transition: transform 0.3s ease-in-out;
+
+}
+.rules-close-button:hover{
+     transform: scale(1.4);
+     transition: transform 0.3s ease-in-out;
+}
+/* ************************************************************************************************************* */
+/* **************************************************** STEP 2 ************************************************* */
+/* ************************************************************************************************************* */
+
+body{
+     display: flex;
+     justify-content: center;
+     align-items: start;
+}
+.app-step2{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     flex-direction: column;
+
+     position: relative;
+
+     width: 100%;
+     height: 100%;
+}
+.app-step2 main{
+     position: relative;
+     z-index: 2;
+     width: 80%;
+     height: 80%;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: center;
+}
+
+
+.user-title, .bot-title{
+     font-size: 24px;
+     color: white;
+     letter-spacing: 2px;
+     margin-bottom: 70px;
+     text-align: center;
+}
+
+.user{
+     margin-right: 17.5px;
+}
+.bot{
+     margin-left: 17.5px;
+}
+
+.app-step2 .circle-border{
+     width: 300px;
+     height: 300px;
+}
+
+.app-step2 .circle-img-container{
+     width: 225px;
+     height: 225px;
+}
+
+.app-step2 .circle-border{
+     position: initial;
+     top: 0;
+     left: 0;
+}
+.app-step2 .rules-button-container{
+     z-index: 2;
+}
+
+.result-container{
+     display: none;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+.active{
+     display: flex;
+}
+.result-title{
+     font-size: 60px;
+     color: white;
+     font-weight: 700;
+     letter-spacing: 2px;
+     margin-bottom: 30px;
+}
+.result-button{
+     padding: 20px 85px;
+     background-color: white;
+     color: var(--DarkText);
+     letter-spacing: 1.5px;
+     border-radius: 10px;
+     font-size: 20px;
+}
+#defeat{
+     color: red;
+}
+
+.win{
+     color: green;
+}
+#paper-border-win{
+     box-shadow: 1px 10px 0px 1px #2846C1, 
+     0 0 0 70px rgba(31, 55, 86, 40%), 
+     0 0 0 140px rgba(31, 55, 86, 30%), 
+     0 0 0 225px rgba(31, 55, 86, 20%);
+     background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+
+}
+#rock-border-win{
+     box-shadow:   1px 10px 0px 1px #A01533,
+     0 0 0 70px rgba(31, 55, 86, 40%), 
+     0 0 0 140px rgba(31, 55, 86, 30%), 
+     0 0 0 225px rgba(31, 55, 86, 20%);
+
+     background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+
+}
+#sizo-border-win{
+     box-shadow: 1px 10px 0px 1px #C56D1D,
+     0 0 0 70px rgba(31, 55, 86, 40%), 
+     0 0 0 140px rgba(31, 55, 86, 30%), 
+     0 0 0 225px rgba(31, 55, 86, 20%);
+     background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+
+}

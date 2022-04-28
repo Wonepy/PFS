@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="style.css">
+
+     <script src="script.js" async></script>
+
+     <title>Pierre-Feuille-Sizo</title>
+</head>
+<body>
+     <div class="app">
+          <header>
+               <img src="../images/logo.svg" alt="logo" class="logo">
+               <div class="score-container">
+                    <p class="score-title">SCORE</p>
+                    <p class="score">0</p>
+               </div>
+          </header>
+          <main>
+               <div class="circle-border" id="paper-border" data-choice="paper">
+                    <div class="circle-img-container">
+                         <img src="../images/icon-paper.svg" alt="paper" class="circle-img">
+                    </div>
+               </div>
+               <div class="circle-border" id="rock-border" data-choice="rock">
+                    <div class="circle-img-container">
+                         <img src="../images/icon-rock.svg" alt="rock" class="circle-img">
+                    </div>
+               </div>
+               
+               <div class="circle-border" id="sizo-border" data-choice="sizo">
+                    <div class="circle-img-container">
+                         <img src="../images/icon-sizo.svg" alt="sizo" class="circle-img">
+                    </div>
+               </div>
+          </main>
+          <div class="rules-button-container">
+          <p class="rules-button">RULES</p>
+          </div>
+     </div>
+
+</body>
+</html>
